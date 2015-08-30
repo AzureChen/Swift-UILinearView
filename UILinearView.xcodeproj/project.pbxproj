@@ -81,7 +81,7 @@
 		5301E0091B91CE2A0051DE1B /* UILinearView */ = {
 			isa = PBXGroup;
 			children = (
-				5301E02C1B91D02A0051DE1B /* classes */,
+				5301E02C1B91D02A0051DE1B /* Sources */,
 				5301E00C1B91CE2A0051DE1B /* AppDelegate.swift */,
 				5301E00E1B91CE2A0051DE1B /* ViewController.swift */,
 				5301E0101B91CE2A0051DE1B /* Main.storyboard */,
@@ -117,14 +117,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5301E02C1B91D02A0051DE1B /* classes */ = {
+		5301E02C1B91D02A0051DE1B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				5301E0631B9370DD0051DE1B /* UILinearScrollView.swift */,
 				5301E02D1B91D09C0051DE1B /* UILinearView.swift */,
 			);
-			name = classes;
-			path = ../classes;
+			name = Sources;
+			path = ../Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
