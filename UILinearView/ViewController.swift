@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var horizontalLinearView: UILinearView!
+    @IBOutlet weak var verticalLinearView: UILinearView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        var colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()]
+        for (var i = 0; i < 3; i++) {
+            var view = UIView()
+            view.setConstWidth(100)
+            view.setConstHeight(200)
+            
+            view.backgroundColor = colors[i] as UIColor
+            horizontalLinearView.addSubview(view)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

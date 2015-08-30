@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UILinearView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edh-u2-ILe" customClass="UILinearView" customModule="UILinearView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.9633922472409836" green="0.88217039146853959" blue="0.75894466491273183" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0jr-VE-QSN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="orientation">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXx-nt-tIa" customClass="UILinearView" customModule="UILinearView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200" width="600" height="400"/>
+                                <color key="backgroundColor" red="0.75854645461690329" green="0.87089047077590509" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXx-nt-tIa" firstAttribute="top" secondItem="edh-u2-ILe" secondAttribute="bottom" id="8z7-YG-PVk"/>
+                            <constraint firstItem="edh-u2-ILe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hqg-zS-05W"/>
+                            <constraint firstItem="edh-u2-ILe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lu0-kh-S4R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jXx-nt-tIa" secondAttribute="bottom" id="MDi-8E-LmC"/>
+                            <constraint firstItem="jXx-nt-tIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SwD-Yb-nha"/>
+                            <constraint firstAttribute="trailing" secondItem="jXx-nt-tIa" secondAttribute="trailing" id="tZV-JY-8hV"/>
+                            <constraint firstAttribute="trailing" secondItem="edh-u2-ILe" secondAttribute="trailing" id="zO9-Nr-Exo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="horizontalLinearView" destination="edh-u2-ILe" id="vr8-5V-an8"/>
+                        <outlet property="verticalLinearView" destination="jXx-nt-tIa" id="Byf-nN-y8t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
