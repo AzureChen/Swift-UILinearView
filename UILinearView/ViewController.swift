@@ -10,18 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UILinearScrollView!
     @IBOutlet weak var verticalLinearView: UILinearView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()]
-        for (var i = 0; i < 3; i++) {
-            var view = UIView(frame: CGRect(x: 0, y: 0, width: 100 * (3 - i), height: 100))
+        for (var i = 0; i < 10; i++) {
+            var view = UIView(frame: CGRect(x: 0, y: 0, width: 100 * (3 - (i % 3)), height: 100))
             
-            view.backgroundColor = colors[i] as UIColor
+            view.backgroundColor = colors[i % 3] as UIColor
             verticalLinearView.addSubview(view)
-        }
+        }        
     }
     
     @IBAction func changeHeight(sender: UIButton) {

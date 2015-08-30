@@ -14,6 +14,7 @@
 		5301E0171B91CE2A0051DE1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5301E0151B91CE2A0051DE1B /* LaunchScreen.xib */; };
 		5301E0231B91CE2A0051DE1B /* UILinearViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301E0221B91CE2A0051DE1B /* UILinearViewTests.swift */; };
 		5301E02E1B91D09C0051DE1B /* UILinearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301E02D1B91D09C0051DE1B /* UILinearView.swift */; };
+		5301E0641B9370DD0051DE1B /* UILinearScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5301E0631B9370DD0051DE1B /* UILinearScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5301E0211B91CE2A0051DE1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5301E0221B91CE2A0051DE1B /* UILinearViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILinearViewTests.swift; sourceTree = "<group>"; };
 		5301E02D1B91D09C0051DE1B /* UILinearView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILinearView.swift; sourceTree = "<group>"; };
+		5301E0631B9370DD0051DE1B /* UILinearScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILinearScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,7 @@
 		5301E0091B91CE2A0051DE1B /* UILinearView */ = {
 			isa = PBXGroup;
 			children = (
-				5301E02C1B91D02A0051DE1B /* Classes */,
+				5301E02C1B91D02A0051DE1B /* classes */,
 				5301E00C1B91CE2A0051DE1B /* AppDelegate.swift */,
 				5301E00E1B91CE2A0051DE1B /* ViewController.swift */,
 				5301E0101B91CE2A0051DE1B /* Main.storyboard */,
@@ -115,13 +117,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5301E02C1B91D02A0051DE1B /* Classes */ = {
+		5301E02C1B91D02A0051DE1B /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				5301E0631B9370DD0051DE1B /* UILinearScrollView.swift */,
 				5301E02D1B91D09C0051DE1B /* UILinearView.swift */,
 			);
-			name = Classes;
-			path = ../Classes;
+			name = classes;
+			path = ../classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +229,7 @@
 			files = (
 				5301E02E1B91D09C0051DE1B /* UILinearView.swift in Sources */,
 				5301E00F1B91CE2A0051DE1B /* ViewController.swift in Sources */,
+				5301E0641B9370DD0051DE1B /* UILinearScrollView.swift in Sources */,
 				5301E00D1B91CE2A0051DE1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
