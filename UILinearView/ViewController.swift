@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var horizontalLinearView: UILinearView!
     @IBOutlet weak var verticalLinearView: UILinearView!
     
     override func viewDidLoad() {
@@ -18,13 +17,16 @@ class ViewController: UIViewController {
         
         var colors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()]
         for (var i = 0; i < 3; i++) {
-            var view = UIView()
-            view.setConstWidth(100)
-            view.setConstHeight(200)
+            var view = UIView(frame: CGRect(x: 0, y: 0, width: 100 * (3 - i), height: 100))
             
             view.backgroundColor = colors[i] as UIColor
-            horizontalLinearView.addSubview(view)
+            verticalLinearView.addSubview(view)
         }
+    }
+    
+    @IBAction func changeHeight(sender: UIButton) {
+        var subview: UIView = verticalLinearView.subviews[1] as! UIView
+        subview.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50)
     }
 }
 

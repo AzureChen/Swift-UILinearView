@@ -16,27 +16,34 @@ class UILinearView: UIView {
     
     @IBInspectable var orientation: Int = UILinearView.HORIZONTAL
 
-    override func drawRect(rect: CGRect) {
-        
-    }
+//    override func drawRect(rect: CGRect) {
+//    }
+//    
+//    override func addSubview(view: UIView) {
+//        super.addSubview(view)
+//    }
     
-    override func addSubview(view: UIView) {
-        super.addSubview(view)
+    override func layoutSubviews() {
+        var currentWidth: CGFloat = 0.0
+        var currentHeight: CGFloat = 0.0
         
-        arrangeSubviews()
-    }
-    
-    func arrangeSubviews() {
         for (var i = 0; i < self.subviews.count;i++) {
-            self.subviews[i].setTranslatesAutoresizingMaskIntoConstraints(false)            
+            var subview: UIView = self.subviews[i] as! UIView
             
             if (orientation == UILinearView.HORIZONTAL) {
-                if (i == 0) {
-                    self.addConstraint(NSLayoutConstraint(item: self.subviews[i], attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0.0))
-                } else {
-                    self.addConstraint(NSLayoutConstraint(item: self.subviews[i], attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.subviews[i - 1], attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0.0))
-                }
+                subview.frame = CGRect(x: currentWidth, y: 0, width: subview.frame.size.width, height: subview.frame.size.height)
+                
+                currentWidth += subview.frame.size.width
+                currentHeight = max(currentHeight, subview.frame.size.height)
+            }
+            if (orientation == UILinearView.VERTICAL) {
+                subview.frame = CGRect(x: 0, y: currentHeight, width: subview.frame.size.width, height: subview.frame.size.height)
+                
+                currentWidth = max(currentWidth, subview.frame.size.width)
+                currentHeight += subview.frame.size.height
             }
         }
+        
+        self.frame.size = CGSize(width: currentWidth, height: currentHeight)
     }
 }
